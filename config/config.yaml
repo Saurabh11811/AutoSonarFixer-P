@@ -1,0 +1,34 @@
+autofix:
+  dry_run: false #true will not call the LLMs, false - will call 
+  fix_files: true #true will replace the existing files, false - will create new files for side by side comparison
+  model: wizardcoder:33b #update per your preference
+  output_suffix: _fix
+  temperature: 0.1
+azure:
+  deployment: <your deployment> #example gpt-4o
+  endpoint: <your end point> # example - https://test.openai.azure.com/
+  key: <your key for above end point> 
+  version: <version API> # example for gpt 40 its 2024-10-21
+backend:
+  type: local # local uses local LLMs, azure uses backend as azure
+database:
+  collection: <your mongo table name> # example Analysis_Sonar
+  db_name: <your mongo DB name> # example sonar_db
+  host: <your host> # example localhost
+  port: <port> # example 27017
+  type: mongodb
+github:
+  repos:
+  - api_token: ''
+    detected_tech_stack: 
+    enabled: true
+    local_clone_path: <path where you want to clone> # example /Users/Myself/repo/
+    repo_url: <repo URL> # example https://github.com/Saurabh11811/agentic-ai-email-assistant
+sonarqube:
+  admin_password: <sonar password>
+  admin_username: admin
+  auth_token: <sonar global auth token>
+  java_home: <java home path> # example /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+  results_path: <results path> # example /Users/Myself/AutoSonarFixer-P/./results/sonar_reports/
+  scanner_path: <scanner path> # example /opt/homebrew/bin/sonar-scanner
+  server_url: <sonar local url and port> # example http://localhost:9000

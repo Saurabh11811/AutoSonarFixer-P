@@ -1,2 +1,2 @@
-# AutoSonarFixer-P
-Small Agent to fix the sonar code quality issues automatically
+# AutoSonarFixer
+AutoSonarFixer - Sonar, then some others

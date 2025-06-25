@@ -1,0 +1,1 @@
+#!/bin/bashecho "Installing SonarQube and SonarScanner on Mac..."# Install SonarQube via Homebrewbrew install sonar# Install SonarScanner via Homebrewbrew install sonar-scannerecho "Installation completed."echo "Start SonarQube server using:"echo "brew services start sonar"echo "Verify sonar-scanner installed:"echo "sonar-scanner --version"
